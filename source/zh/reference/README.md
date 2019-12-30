@@ -101,6 +101,7 @@ sidebarDepth: 3
 - [cesium-threejs-experiment](https://github.com/AnalyticalGraphicsInc/cesium-threejs-experiment) [live](https://analyticalgraphicsinc.github.io/cesium-threejs-experiment/public/)
 - [integrating-cesium-with-threejs](https://cesium.com/blog/2017/10/23/integrating-cesium-with-threejs/)
 - [cesium and three.js](https://blog.csdn.net/zhishiqu/article/details/79077883)
+- [ecojust/flyline](https://github.com/ecojust/flyline) 一款基于three.js的飞线(shader)
 
 ## cesium & React
 
