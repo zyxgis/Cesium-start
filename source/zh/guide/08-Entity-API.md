@@ -38,6 +38,182 @@
 | `wall`           | [WallGraphics](https://cesium.com/docs/cesiumjs-ref-doc/WallGraphics.html) | `可选`与此实体关联的墙。             |
 
 举例：
+``` js    
+//box
+viewer.entities.add({
+    name: 'Blue box',
+    position: Cesium.Cartesian3.fromDegrees(homePOsition[0], homePOsition[1], 0),
+    box: {
+        dimensions: new Cesium.Cartesian3(400000.0, 300000.0, 500000.0),
+        material: Cesium.Color.BLUE
+    }
+});
+
+//Circle
+viewer.entities.add({
+    position: Cesium.Cartesian3.fromDegrees(111.0, 40.0, 150000.0),
+    name: 'Green circle at height',
+    ellipse: {
+        semiMinorAxis: 300000.0,
+        semiMajorAxis: 300000.0,
+        height: 200000.0,
+        material: Cesium.Color.GREEN
+    }
+});
+
+//Ellipse
+viewer.entities.add({
+    position: Cesium.Cartesian3.fromDegrees(103.0, 40.0),
+    name: 'Red ellipse on surface with outline',
+    ellipse: {
+        semiMinorAxis: 250000.0,
+        semiMajorAxis: 400000.0,
+        material: Cesium.Color.RED.withAlpha(0.5),
+        outline: true,
+        outlineColor: Cesium.Color.RED
+    }
+});
+
+//Corridor
+viewer.entities.add({
+    name: 'Red corridor on surface with rounded corners and outline',
+    corridor: {
+        positions: Cesium.Cartesian3.fromDegreesArray([
+        100.0, 40.0,
+        105.0, 40.0,
+        105.0, 35.0
+        ]),
+        width: 200000.0,
+        material: Cesium.Color.RED.withAlpha(0.5),
+        outline: true,
+        outlineColor: Cesium.Color.RED
+    }
+});
+
+//Cylinder
+viewer.entities.add({
+    name: 'Green cylinder with black outline',
+    position: Cesium.Cartesian3.fromDegrees(100.0, 40.0, 200000.0),
+    cylinder: {
+        length: 400000.0,
+        topRadius: 200000.0,
+        bottomRadius: 200000.0,
+        material: Cesium.Color.GREEN.withAlpha(0.5),
+        outline: true,
+        outlineColor: Cesium.Color.DARK_GREEN
+    }
+});
+
+//Cone
+viewer.entities.add({
+    name: 'Red cone',
+    position: Cesium.Cartesian3.fromDegrees(105.0, 40.0, 200000.0),
+    cylinder: {
+        length: 400000.0,
+        topRadius: 0.0,
+        bottomRadius: 200000.0,
+        material: Cesium.Color.RED
+    }
+});
+
+//Polygon 
+viewer.entities.add({
+    name: 'Red polygon on surface',
+    polygon: {
+        hierarchy: Cesium.Cartesian3.fromDegreesArray([115.0, 37.0,
+        115.0, 32.0,
+        107.0, 33.0,
+        102.0, 31.0,
+        102.0, 35.0]),
+        material: Cesium.Color.RED
+    }
+});
+
+//polyline
+viewer.entities.add({
+    name: 'Red line on the surface',
+    polyline: {
+        positions: Cesium.Cartesian3.fromDegreesArray([
+            75, 35,
+        125, 35
+        ]),
+        width: 5,
+        material: Cesium.Color.RED
+    }
+});
+
+//polylineVolume
+function computeCircle(radius) {
+    var positions = [];
+    for (var i = 0; i < 360; i++) {
+        var radians = Cesium.Math.toRadians(i);
+        positions.push(new Cesium.Cartesian2(radius * Math.cos(radians), radius * Math.sin(radians)));
+    }
+    return positions;
+}
+
+viewer.entities.add({
+    name: 'Red tube with rounded corners',
+    polylineVolume: {
+        positions: Cesium.Cartesian3.fromDegreesArray([
+            85.0, 32.0,
+            85.0, 36.0,
+            89.0, 36.0
+        ]),
+        shape: computeCircle(60000.0),
+        material: Cesium.Color.RED
+    }
+});
+
+//rectangle
+viewer.entities.add({
+    name: 'Red translucent rectangle with outline',
+    rectangle: {
+        coordinates: Cesium.Rectangle.fromDegrees(80.0, 20.0, 110.0, 25.0),
+        material: Cesium.Color.RED.withAlpha(0.5),
+        outline: true,
+        outlineColor: Cesium.Color.RED
+    }
+});
+
+//Sphere
+viewer.entities.add({
+    name: 'Red sphere with black outline',
+    position: Cesium.Cartesian3.fromDegrees(107.0, 40.0, 300000.0),
+    ellipsoid: {
+        radii: new Cesium.Cartesian3(300000.0, 300000.0, 300000.0),
+        material: Cesium.Color.RED.withAlpha(0.5),
+        outline: true,
+        outlineColor: Cesium.Color.BLACK
+    }
+});
+
+//ellipsoid
+viewer.entities.add({
+name: 'Blue ellipsoid',
+    position: Cesium.Cartesian3.fromDegrees(114.0, 40.0, 300000.0),
+    ellipsoid: {
+        radii: new Cesium.Cartesian3(200000.0, 200000.0, 300000.0),
+        material: Cesium.Color.BLUE
+    }
+});
+
+//wall
+viewer.entities.add({
+    name: 'Green wall from surface with outline',
+    wall: {
+        positions: Cesium.Cartesian3.fromDegreesArrayHeights([
+            107.0, 43.0, 100000.0,
+            97.0, 43.0, 100000.0,
+            97.0, 40.0, 100000.0,
+            107.0, 40.0, 100000.0,
+            107.0, 43.0, 100000.0
+        ]),
+        material: Cesium.Color.GREEN
+    }
+});
+```
+[示例查看](https://sogrey.github.io/Cesium-start-Example/examples/model/Entity.html)
 
 [官方例子 Points](https://sandcastle.cesium.com/?src=Points.html)
 
@@ -61,27 +237,27 @@ viewer.entities.add({
 同样，添加面对象和多边形雷同，具体查询对应API文档。
 
 ``` js
-        var videoElement = document.getElementById('trailer'); //获得video对象
-        var sphere = viewer.entities.add({//添加实体
-            name: 'video plane outline',
-            position: Cesium.Cartesian3.fromDegrees(-79, 39, 0),
-            plane: {//面对象
-                plane: new Cesium.Plane(Cesium.Cartesian3.UNIT_Z, 0.0),
-                dimensions: new Cesium.Cartesian2(400.0, 217.5),
-                fill: true,
-                outline: true,
-                material: videoElement //指定材质
-            },
-            polygon: {//不规则多边形
-                hierarchy: Cesium.Cartesian3.fromDegreesArray([
-                    -79, 39,
-                    -79.015, 39,
-                    -79.02, 39.01,
-                    -79, 39.01
-                ]),
-                material: videoElement //指定材质
-            }
-        });
+var videoElement = document.getElementById('trailer'); //获得video对象
+var sphere = viewer.entities.add({//添加实体
+    name: 'video plane outline',
+    position: Cesium.Cartesian3.fromDegrees(-79, 39, 0),
+    plane: {//面对象
+        plane: new Cesium.Plane(Cesium.Cartesian3.UNIT_Z, 0.0),
+        dimensions: new Cesium.Cartesian2(400.0, 217.5),
+        fill: true,
+        outline: true,
+        material: videoElement //指定材质
+    },
+    polygon: {//不规则多边形
+        hierarchy: Cesium.Cartesian3.fromDegreesArray([
+            -79, 39,
+            -79.015, 39,
+            -79.02, 39.01,
+            -79, 39.01
+        ]),
+        material: videoElement //指定材质
+    }
+});
 ```
 
 查看[示例](https://sogrey.github.io/Cesium-start-Example//examples/video/Video-Fusion.html)
@@ -196,6 +372,38 @@ viewer.entities属性实际上是一个EntityCollecton对象，是entity的一�
 - [resumeEvents()](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html#resumeEvents) [EntityCollection#collectionChanged](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html#collectionChanged)添加或删除项目后立即 恢复引发事件。调用此函数时，在事件暂停期间进行的任何修改将作为单个事件触发。该函数是按引用计数的，只要有对的相应调用，就可以安全地多次调用[EntityCollection#resumeEvents](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html#resumeEvents)。
 
 - [suspendEvents()](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html#suspendEvents) [EntityCollection#collectionChanged](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html#collectionChanged)在引发到的相应调用之前， 防止引发事件[EntityCollection#resumeEvents](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html#resumeEvents)，此时将引发涵盖所有已暂停操作的单个事件。这允许有效地添加和删除许多项目。只要有相应的调用，就可以安全地多次调用此函数[EntityCollection#resumeEvents](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html#resumeEvents)。
+
+## 选择
+
+在多数应用场景中，我们不仅需要绘制出空间对象还需要用鼠标拾取对象，cesium为我们提供了scene.pick接口，如下代码实现坐标左键单击实现对象的拾取：
+
+``` js
+ viewer.entities.add({
+    id:'obj_id_110',
+    position:Cesium.Cartesian3.fromDegrees(103.0, 40.0),
+    name:'Red ellipse on surface with outline',
+    ellipse:{
+        semiMinorAxis:250000.0,
+        semiMajorAxis:400000.0,
+        height:200000.0,
+        extrudedHeight:400000.0,
+        fill:true,
+        material:Cesium.Color.RED.withAlpha(0.5),
+        outline:true, //必须设置height，否则ouline无法显示
+        outlineColor:Cesium.Color.BLUE.withAlpha(0.5),
+        outlineWidth:10.0//windows系统下不能设置固定为1
+    }
+}); 
+varhandler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+handler.setInputAction(function(movement) {
+    varpick = viewer.scene.pick(movement.position);
+    if(Cesium.defined(pick) && (pick.id.id === 'obj_id_110')) {
+        //do sth
+    }
+},Cesium.ScreenSpaceEventType.LEFT_CLICK);
+```
+
+以上代码，在添加的entity中加入id唯一标识，然后利用ScreenSpaceEventHandler接口监听鼠标事件，在左键单击事件中，通过viewer.scene.pick获取点击出的对象，如果对象不为空且id匹配则说明选中。
 
 ## DataSource
 
