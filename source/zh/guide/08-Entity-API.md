@@ -373,13 +373,13 @@ viewer.entities属性实际上是一个EntityCollecton对象，是entity的一�
 
 - [suspendEvents()](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html#suspendEvents) [EntityCollection#collectionChanged](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html#collectionChanged)在引发到的相应调用之前， 防止引发事件[EntityCollection#resumeEvents](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html#resumeEvents)，此时将引发涵盖所有已暂停操作的单个事件。这允许有效地添加和删除许多项目。只要有相应的调用，就可以安全地多次调用此函数[EntityCollection#resumeEvents](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html#resumeEvents)。
 
-## 选择
+## 拾取
 
 在多数应用场景中，我们不仅需要绘制出空间对象还需要用鼠标拾取对象，cesium为我们提供了scene.pick接口，如下代码实现坐标左键单击实现对象的拾取：
 
 ``` js
  viewer.entities.add({
-    id:'obj_id_110',
+    id:'obj_id_110',//唯一ID
     position:Cesium.Cartesian3.fromDegrees(103.0, 40.0),
     name:'Red ellipse on surface with outline',
     ellipse:{

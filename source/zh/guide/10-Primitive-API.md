@@ -2,6 +2,27 @@
 sidebarDepth: 5
 ---
 # Primitive-API 性能好，才是真的好
+
+> Three.js中，要创建一个几何体(`THREE.Mesh`)，包括几何体(`THREE.Geometry`)还有材质(`THREE.Material`)才能正确渲染。
+> 
+> 在Cesium中，`Cesium.Primitive`包含两部分几何体`Cesium.Geometry`和外观`Cesium.Appearance`。
+
+Primitive由两个部分组成：
+
+- （1）几何形状（Geometry）：定义了Primitive的结构，例如三角形、线条、点等
+- （2）外观（Appearance ）：定义Primitive的着色（Sharding），包括GLSL（OpenGL着色语言，OpenGL Shading Language）顶点着色器和片段着色器（ vertex and fragment shaders），以及渲染状态（render state）
+
+使用Geometry和Appearance 具有以下优势：
+
+- （1）性能：绘制大量Primitive时，可以将其合并为单个Geometry以减轻CPU负担、更好的使用GPU。合并Primitive由web worker线程执行，UI保持响应性
+- （2）灵活性：Geometry与Appearance 解耦，两者可以分别进行修改
+- （3）低级别访问：易于编写GLSL 顶点、片段着色器、使用自定义的渲染状态 
+
+同时，具有以下劣势：
+
+- （1）需要编写更多地代码
+- （2）需要对图形编程有更多的理解，特别是OpenGL的知识
+
 ## Primitive 和 GroundPrimitive
 
 图元（[`Primitive`](https://cesium.com/docs/cesiumjs-ref-doc/Primitive.html)）表示场景中的几何图形。几何可以来自不同的几何类型(`GeometryInstance`或`Geometry`)。图元将几何体实例与一个描述完整着色的外观（包括`Material`和`RenderState`）组合在一起。
@@ -127,8 +148,6 @@ scene.primitives.add(new Cesium.GroundPrimitive({
   geometryInstances : [rectangleInstance, ellipseInstance]
 }));
 ```
-
-> 以上是官方文档上的描述，~~为毛我一句都看不懂。~~ 从Three.js转过来的我，只知道要创建一个几何体(`THREE.Mesh`)，包括几何体(`THREE.Geometry`)还有材质(`THREE.Material`)才能正确渲染，按照这个思路试试看。
 
 ## GeometryInstance 类
 几何体实例化([`GeometryInstance`](https://cesium.com/docs/cesiumjs-ref-doc/GeometryInstance.html))允许将一个几何体对象放置在几个不同的位置并进行唯一着色。例如，可以对一个BoxGeometry进行多次实例化，每次使用不同的modelMatrix来更改其位置，旋转和比例。
@@ -552,6 +571,7 @@ Cesium.Material._materialCache.addMaterial(Cesium.Material.PolylineTrailLinkType
 
 ## 参考
 
+- [Cesium(三) 几何图形与外观](https://blog.csdn.net/happyduoduo1/article/details/51868042)
 - [cesium编程入门(八)设置材质](https://www.jianshu.com/p/4697d8147926)
 
 

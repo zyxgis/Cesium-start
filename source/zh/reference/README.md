@@ -204,6 +204,7 @@ sidebarDepth: 3
 - @vtxf [知乎](https://www.zhihu.com/people/vtxf/activities)
 - @韦修勇 [github](https://github.com/MikesWei)
 - @YanzheZhang [github](https://github.com/YanzheZhang)
+- [@自由战士](https://www.cnblogs.com/webgl-angela/)
 
 ---
 <!-- 自定义footer -->
