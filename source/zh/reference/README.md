@@ -21,6 +21,10 @@ sidebarDepth: 3
 - [Introducing 3D Tiles](https://cesium.com/blog/2015/08/10/introducing-3d-tiles/)
 - [gltf格式文档](https://github.com/KhronosGroup/glTF)
 
+## 系列教程
+
+- [@自由战士](https://www.cnblogs.com/webgl-angela/)
+- [@GIS之家](https://www.cnblogs.com/giserhome/tag/cesium/)
 
 ## 其他教程资料
 
@@ -204,7 +208,6 @@ sidebarDepth: 3
 - @vtxf [知乎](https://www.zhihu.com/people/vtxf/activities)
 - @韦修勇 [github](https://github.com/MikesWei)
 - @YanzheZhang [github](https://github.com/YanzheZhang)
-- [@自由战士](https://www.cnblogs.com/webgl-angela/)
 
 ---
 <!-- 自定义footer -->
