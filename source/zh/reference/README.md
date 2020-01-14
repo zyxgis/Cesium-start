@@ -25,13 +25,14 @@ sidebarDepth: 3
 
 - [@自由战士](https://www.cnblogs.com/webgl-angela/)
 - [@GIS之家](https://www.cnblogs.com/giserhome/tag/cesium/)
+- [Cesium学习系列汇总](https://mp.weixin.qq.com/s?__biz=MzU1ODcyMjEwOA==&mid=2247484268&idx=1&sn=861480d7108f70a2fd16000df4df2db1&chksm=fc237e3fcb54f72904a9cd57a3c2bf325e30a00de614ec3145dcb1f0310e7c0f9362d4f00742&token=1964897234&lang=zh_CN#rd) |[Cesium学习笔记汇总_cumtzheNo1_新浪博客](http://blog.sina.com.cn/s/blog_15e866bbe0102xu2f.html)| [Cesium学习笔记汇总_cumtzheNo1_源码 @YanzheZhang](https://github.com/YanzheZhang/Cesium.HPUZYZ.Demo)
+- [Cesium教程系列汇总(超图大牛作品，国内较早的深入研究教程）](http://www.cnblogs.com/fuckgiser/p/5706842.html) |[Cesium教程系列汇总-网上示例](https://pasu.github.io/ExamplesforCesium/examples/examples.html%23Primer) |[Cesium教程系列汇总-网上示例源码](https://github.com/pasu/ExamplesforCesium)
+- [Cesium编程入门 | cesium中文网](http://cesium.xin/wordpress/archives/category/cesium%e7%bc%96%e7%a8%8b%e5%85%a5%e9%97%a8) |[Cesium编程中级 | cesium中文网](http://cesium.xin/wordpress/archives/category/cesium%e7%bc%96%e7%a8%8b%e4%b8%ad%e7%ba%a7)
 
 ## 其他教程资料
 
 - [Cesium 中文社区教程](http://cesiumcn.org/guide/index.html) [github](https://github.com/hujiulin/CesiumJS-tutorial)
 - [cesium 中文网](http://cesium.xin/) [国内快速访问](http://cesium.coinidea.com/)
-- [Cesium学习笔记 @YanzheZhang](https://github.com/YanzheZhang/Cesium.HPUZYZ.Demo)
-- [ExamplesforCesium github](https://github.com/pasu/ExamplesforCesium)
 - [CesiumLabApkServe](https://github.com/weshmily/CesiumLabApkServe) 为CesiumLab工具下载地图,影像数据的.pak文件架设地图服务
 - [[简书]Cesium Workshop @布谷李](https://www.jianshu.com/p/f66caf4cb43f)
 - [[知乎专栏]Cesium开发笔记 @vtxf](https://zhuanlan.zhihu.com/Cesium2)
@@ -39,13 +40,6 @@ sidebarDepth: 3
 - [[知乎]Cesium API使用指南1](https://zhuanlan.zhihu.com/p/80904975)
 - [[简书]Cesium 官方教程翻译 @Cesium实验室](https://www.jianshu.com/p/31c3b55a21eb)
 - [Cesium打包命令总结](https://zhuanlan.zhihu.com/p/47588567)
-- [Cesium教程系列汇总(超图大牛作品，国内较早的深入研究教程）](http://www.cnblogs.com/fuckgiser/p/5706842.html)
-- [Cesium教程系列汇总-网上示例](https://pasu.github.io/ExamplesforCesium/examples/examples.html%23Primer)
-- [Cesium教程系列汇总-网上示例源码](https://github.com/pasu/ExamplesforCesium)
-- [Cesium学习笔记汇总_cumtzheNo1_新浪博客](http://blog.sina.com.cn/s/blog_15e866bbe0102xu2f.html)
-- [Cesium学习笔记汇总_cumtzheNo1_源码](https://github.com/YanzheZhang/Cesium.HPUZYZ.Demo)
-- [Cesium编程入门 | cesium中文网](http://cesium.xin/wordpress/archives/category/cesium%e7%bc%96%e7%a8%8b%e5%85%a5%e9%97%a8)
-- [Cesium编程中级 | cesium中文网](http://cesium.xin/wordpress/archives/category/cesium%e7%bc%96%e7%a8%8b%e4%b8%ad%e7%ba%a7)
 - [Cesium快速入门(火星科技)](http://cesium.marsgis.cn/docs/go.html%3Fid%3D11)
 - [Cesium官方教程翻译(火星科技)](http://cesium.marsgis.cn/docs/go.html%3Fid%3D12)
 - [Cesium API文档(火星科技）](http://cesium.marsgis.cn/docs/go.html%3Fid%3D13)
