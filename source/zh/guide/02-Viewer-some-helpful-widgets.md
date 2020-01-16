@@ -104,7 +104,7 @@ css方式：
 
 ## Cesium ion
 Cesium ion是一个三维数据切片和存储的平台，这里使用ion平台上存储的Sentinal-2 影像和Cesium World Terrain.
-需要访问[https://cesium.com/ion/](https://cesium.com/ion/) 注册一个免费账户，并在Access Tokens页面创建访问令牌.
+需要访问[https://cesium.com/ion/](https://cesium.com/ion/) 注册一个免费账户，并在[Access Tokens](https://cesium.com/ion/tokens)页面创建访问令牌.
 Cesium ion默认提供5GB存储空间.
 
 在创建viewer之前设置访问令牌：
