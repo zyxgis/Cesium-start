@@ -75,7 +75,7 @@ sidebarDepth: 3
 
 ## cesium插件
 
-- [alberto-acevedo/cesium-navigation(指北针/比例尺插件）](https://github.com/alberto-acevedo/cesium-navigation) [live](http://larcius.github.io/cesium-navigation/)
+- [alberto-acevedo/cesium-navigation(指北针/比例尺插件）](https://github.com/alberto-acevedo/cesium-navigation) [live](http://larcius.github.io/cesium-navigation/) 其他的[nmccready/cesium-navigation](https://github.com/nmccready/cesium-navigation) [richard1015/cesium-navigation-es6](https://github.com/richard1015/cesium-navigation-es6) 支持npm
 - [leforthomas/cesium-drawhelper(图形编辑插件）](https://github.com/leforthomas/cesium-drawhelper) [live](http://pad.geocento.com/DrawHelper/)
 - [leation/drawhelper-with-cesium-v1.41(Cesium实验室QQ群中的 李仙伟 改版的图形编辑插件)](https://github.com/leation/drawhelper-with-cesium-v1.41)
   在原[cesium-drawhelper](https://github.com/leforthomas/cesium-drawhelper)基础上，修改了DrawHelper.js部分地方
