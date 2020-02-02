@@ -115,6 +115,7 @@ sidebarDepth: 3
 - [VUE CESIUM](https://gitee.com/musicguoke/vue-cesium)
 - [Vue-cli3.0+Cesium快速构建Demo](https://www.jianshu.com/p/99257bf837cc)
 - [isboyjc/vue-cli-plugin-cesium](https://github.com/isboyjc/vue-cli-plugin-cesium)
+- [ShareQiu1994/cesium-vue2](https://github.com/ShareQiu1994/cesium-vue2)cesium-vue2(基于vuecli3.x) [ShareQiu1994/cesium-vue](https://github.com/ShareQiu1994/cesium-vue)cesium-vue(基于vuecli2.x)
 
 
 ## cesium & WebPack
