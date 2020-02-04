@@ -172,6 +172,7 @@ sidebarDepth: 3
 - [mrdoob/webgl-blendfunctions(Three.js创始人 Mr.doob 的WebGL融合工具)](https://github.com/mrdoob/webgl-blendfunctions)
 - [Ovilia/ThreeExample.js(《Three.js 入门指南》书例代码)](https://github.com/Ovilia/ThreeExample.js)
 - [josdirksen/threejs-cookbook(Three.js Cookbook示例源码)](https://github.com/josdirksen/threejs-cookbook)
+- [着色器 shader 调试](http://www.glslsandbox.com/) [示例](http://glslsandbox.com/e#41235.0)
 
 ## 模型装换工具
 
